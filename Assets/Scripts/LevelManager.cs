@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
@@ -13,7 +14,6 @@ public class LevelManager : MonoBehaviour
   void Start()
   {
     var enemy1 = Resources.Load("Enemy1") as GameObject;
-
     SpawnEnemies(enemy1Count, enemy1, spawnPoint1);
     SpawnEnemies(enemy1Count, enemy1, spawnPoint2);
     SpawnEnemies(enemy1Count, enemy1, spawnPoint3);
@@ -36,6 +36,12 @@ public class LevelManager : MonoBehaviour
     {
       var enemyInstance = GameObject.Instantiate(enemyPrefab);
       enemyInstance.transform.position = spawnPoint.position;
+      
+      var agentLocation = spawnPoint.position;
+      agentLocation.x = 30;
+      
+      var agent = enemyInstance.GetComponent<NavMeshAgent>();
+      agent.SetDestination(agentLocation);
     }
   }
 }
