@@ -33,7 +33,19 @@ public class LevelManager : MonoBehaviour
   {
     if(_enemy1Spawned < enemy1Count)
     {
-      CheckSpawnInterval(Time.deltaTime);
+      var intervalElapsed = CheckSpawnInterval(Time.deltaTime, _enemy1Prefab);
+      if(intervalElapsed)
+      {
+        _enemy1Spawned++;
+      }
+    }
+    else if(_enemy2Spawned < enemy2Count)
+    {
+      var intervalElapsed = CheckSpawnInterval(Time.deltaTime, _enemy2Prefab);
+      if (intervalElapsed)
+      {
+        _enemy2Spawned++;
+      }
     }
   }
 
@@ -43,16 +55,15 @@ public class LevelManager : MonoBehaviour
     SceneManager.LoadScene(scene.name, LoadSceneMode.Single);
   }
 
-  private void CheckSpawnInterval(float deltaTime)
+  private bool CheckSpawnInterval(float deltaTime, GameObject enemyPrefab)
   {
     _elapsedSpawnTime += deltaTime;
     if(_elapsedSpawnTime >= spawnInterval)
     {
+
       var spawnPoint = spawnPoints[_spawnIndex];
 
-      SpawnEnemy(_enemy1Prefab, spawnPoint);
-
-      _enemy1Spawned++;
+      SpawnEnemy(enemyPrefab, spawnPoint);
 
       _elapsedSpawnTime = 0.0f;
 
@@ -62,7 +73,11 @@ public class LevelManager : MonoBehaviour
       {
         _spawnIndex = 0;
       }
+
+      return true;
     }
+
+    return false;
   }
 
   private void SpawnEnemy(GameObject enemyPrefab, Transform spawnPoint)
