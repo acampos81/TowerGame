@@ -18,12 +18,16 @@ public class Spawner : MonoBehaviour
   public void SpawnEnemy(Transform spawnPoint)
   {
     var enemyInstance = GameObject.Instantiate(_enemyPrefab);
+    
+    var agent = enemyInstance.GetComponent<NavMeshAgent>();
+    agent.enabled = false;
+
     enemyInstance.transform.position = spawnPoint.position;
 
     var agentLocation = spawnPoint.position;
     agentLocation.x = 30f;
 
-    var agent = enemyInstance.GetComponent<NavMeshAgent>();
+    agent.enabled = true;
     agent.SetDestination(agentLocation);
 
     _spawnCount++;
