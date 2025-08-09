@@ -8,6 +8,7 @@ public class SpawningManager : MonoBehaviour
 
   public List<Spawner> allSpawners;
   public List<Transform> spawnPoints;
+  public BoxCollider attackArea;
 
   private List<Spawner> _activeSpawners;
   private float _elapsedSpawnTime;
@@ -40,7 +41,7 @@ public class SpawningManager : MonoBehaviour
 
       var randomSpawnerIndex = Random.Range(0, _activeSpawners.Count);
       var spawner = _activeSpawners[randomSpawnerIndex];
-      spawner.SpawnEnemy(spawnPoint);
+      spawner.SpawnEnemy(spawnPoint, attackArea);
       
       if(spawner.AllEnemiesSpawned())
       {
