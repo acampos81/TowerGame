@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SpawningManager : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class SpawningManager : MonoBehaviour
 
   private List<Spawner> _activeSpawners;
   private float _elapsedSpawnTime;
+  private int _spawnedEnemies;
+
+  public UnityEvent OnAllEnemiesEliminated;
 
   // Start is called once before the first execution of Update after the MonoBehaviour is created
   void Start()
@@ -41,12 +45,26 @@ public class SpawningManager : MonoBehaviour
 
       var randomSpawnerIndex = Random.Range(0, _activeSpawners.Count);
       var spawner = _activeSpawners[randomSpawnerIndex];
-      spawner.SpawnEnemy(spawnPoint, attackArea);
+      var enemyInstance = spawner.SpawnEnemy(spawnPoint, attackArea);
+
+      var hittableObject = enemyInstance.GetComponent<HittableObject>();
+      hittableObject.OnHitPointsZero.AddListener(EnemyEliminated);
+
+      _spawnedEnemies++;
       
       if(spawner.AllEnemiesSpawned())
       {
         _activeSpawners.Remove(spawner);
       }
+    }
+  }
+
+  public void EnemyEliminated()
+  {
+    _spawnedEnemies--;
+    if(_spawnedEnemies == 0)
+    {
+      OnAllEnemiesEliminated.Invoke();
     }
   }
 }

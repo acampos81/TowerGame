@@ -84,7 +84,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c2f6ec7c7b9384b8d7dc0ad8c3b368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitPoints: 0
+  maxHitPoints: 150
+  OnHitPointsZero:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!136 &8593333585278671490
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ public class Spawner : MonoBehaviour
     _enemyPrefab = Resources.Load(prefabName) as GameObject;
   }
 
-  public void SpawnEnemy(Transform spawnPoint, BoxCollider attackArea)
+  public GameObject SpawnEnemy(Transform spawnPoint, BoxCollider attackArea)
   {
     var enemyInstance = GameObject.Instantiate(_enemyPrefab);
     
@@ -30,6 +30,8 @@ public class Spawner : MonoBehaviour
     agent.SetDestination(agentLocation);
 
     _spawnCount++;
+
+    return enemyInstance;
   }
 
   private Vector3 GetAttackLocation(BoxCollider attackArea)

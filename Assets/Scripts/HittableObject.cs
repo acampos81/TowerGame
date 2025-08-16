@@ -1,10 +1,13 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class HittableObject : MonoBehaviour
 {
   public int maxHitPoints;
 
   private int _currentHitPoints;
+
+  public UnityEvent OnHitPointsZero;
 
   private void Start()
   {
@@ -16,7 +19,7 @@ public class HittableObject : MonoBehaviour
     _currentHitPoints -= damage;
     if(_currentHitPoints <= 0)
     {
-      // respond to no more hit points.
+      OnHitPointsZero.Invoke();
     }
   }
 }

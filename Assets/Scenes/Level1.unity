@@ -6342,6 +6342,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 342907296}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &343559197 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3007398091325162872, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+  m_PrefabInstance: {fileID: 1396766788}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379509cf10073b2428f9f36fca77f0d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &343943172
 GameObject:
   m_ObjectHideFlags: 0
@@ -16958,7 +16969,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c2f6ec7c7b9384b8d7dc0ad8c3b368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitPoints: 0
+  maxHitPoints: 500
+  OnHitPointsZero:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 343559197}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: TowerDestroyed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &976872852
 GameObject:
   m_ObjectHideFlags: 0
@@ -27512,6 +27538,21 @@ MonoBehaviour:
   - {fileID: 1109743697}
   - {fileID: 102545323}
   attackArea: {fileID: 216860734}
+  OnAllEnemiesEliminated:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 343559197}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: AllEnemiesDestroyed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1484520637
 Transform:
   m_ObjectHideFlags: 0
