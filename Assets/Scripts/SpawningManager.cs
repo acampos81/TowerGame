@@ -62,6 +62,9 @@ public class SpawningManager : MonoBehaviour
   public void EnemyEliminated()
   {
     _spawnedEnemies--;
+
+    Debug.Log($"Enemies left:{_spawnedEnemies}");
+
     if(_spawnedEnemies == 0)
     {
       OnAllEnemiesEliminated.Invoke();
