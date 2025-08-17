@@ -22,4 +22,9 @@ public class HittableObject : MonoBehaviour
       OnHitPointsZero.Invoke();
     }
   }
+
+  public float GetHitPointsPercentage()
+  {
+    return _currentHitPoints/maxHitPoints;
+  }
 }
