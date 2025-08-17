@@ -5,6 +5,9 @@ public class EnemyLogic : MonoBehaviour
 {
   public NavMeshAgent agent;
   public Animator animator;
+  public Transform capsuleTransform;
+  public LayerMask raycastMask;
+  public int damageAmount;
 
   // Start is called once before the first execution of Update after the MonoBehaviour is created
   void Start()
@@ -26,5 +29,15 @@ public class EnemyLogic : MonoBehaviour
     agent.ResetPath();
 
     animator.SetBool("IsAttacking", true);
+  }
+
+  public void PerformAttack()
+  {
+    bool hitDetected = Physics.Raycast(capsuleTransform.position, capsuleTransform.forward, out RaycastHit hitInfo, 5f,  raycastMask, QueryTriggerInteraction.Ignore);
+    if(hitDetected)
+    {
+      var towerHittableObject = hitInfo.collider.gameObject.GetComponent<HittableObject>();
+      towerHittableObject.TakeDamage(damageAmount);
+    }
   }
 }

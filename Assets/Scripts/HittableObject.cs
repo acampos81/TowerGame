@@ -16,15 +16,18 @@ public class HittableObject : MonoBehaviour
 
   public void TakeDamage(int damage)
   {
-    _currentHitPoints -= damage;
-    if(_currentHitPoints <= 0)
+    if(_currentHitPoints > 0)
     {
-      OnHitPointsZero.Invoke();
+      _currentHitPoints -= damage;
+      if(_currentHitPoints <= 0)
+      {
+        OnHitPointsZero.Invoke();
+      }
     }
   }
 
   public float GetHitPointsPercentage()
   {
-    return _currentHitPoints/maxHitPoints;
+    return (float)_currentHitPoints/(float)maxHitPoints;
   }
 }

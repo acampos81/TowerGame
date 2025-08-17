@@ -16861,7 +16861,7 @@ GameObject:
   - component: {fileID: 966547118}
   - component: {fileID: 966547117}
   - component: {fileID: 966547121}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TowerWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25685,6 +25685,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 981886714768543588, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1536521121875473065, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -25809,8 +25813,36 @@ PrefabInstance:
       propertyPath: 'spawnPoints.Array.data[2]'
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4753870304390206215, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5031176499127207711, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5289330175391595409, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6279940855111282553, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: hittableObject
+      value: 
+      objectReference: {fileID: 966547121}
+    - target: {fileID: 6609431586101184943, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7009316154476317071, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770676409942546322, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770676409942546322, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8341814209942304962, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
