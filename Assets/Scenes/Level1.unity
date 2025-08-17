@@ -25687,7 +25687,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 981886714768543588, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1536521121875473065, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
       propertyPath: m_Name

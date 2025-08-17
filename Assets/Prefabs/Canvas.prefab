@@ -112,6 +112,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2849129142710635043}
     m_Modifications:
+    - target: {fileID: 3244049716762271232, guid: acb2d4ace3a69ce4895d5a2b5040d54b, type: 3}
+      propertyPath: uiManager
+      value: 
+      objectReference: {fileID: 204990914751965011}
     - target: {fileID: 8477440956828094113, guid: acb2d4ace3a69ce4895d5a2b5040d54b, type: 3}
       propertyPath: m_Name
       value: LevelManager

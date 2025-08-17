@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+  public UIManager uiManager;
 
   // Start is called once before the first execution of Update after the MonoBehaviour is created
   void Start()
@@ -17,7 +18,7 @@ public class LevelManager : MonoBehaviour
 
   public void TowerDestroyed()
   {
-    Debug.Log("Game Is Over, Player Lost.");
+    uiManager.ShowGameOver(true);
   }
 
   public void AllEnemiesDestroyed()
