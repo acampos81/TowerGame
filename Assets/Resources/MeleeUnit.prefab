@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6254848092664365108}
   - component: {fileID: 8833468885393001008}
   - component: {fileID: 8412847920263378005}
+  - component: {fileID: 5824391222773647465}
   m_Layer: 0
   m_Name: MeleeUnit
   m_TagString: Enemy
@@ -34,7 +35,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5789413625791565979}
-  - {fileID: 8045534747052288860}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &2185223074596109988
@@ -130,6 +130,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5824391222773647465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5885441700294612381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5217246ade6b374f83d65c47bf7ae73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 2185223074596109988}
+  animator: {fileID: 4427573823647598936}
+  targetDistance: 2.5
 --- !u!1 &6510681255826665322
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +176,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8045534747052288860}
   m_Father: {fileID: 8082642733851054949}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5906593150478231175
@@ -227,7 +243,7 @@ Animator:
   m_GameObject: {fileID: 6510681255826665322}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 50904978673b0ad41b83d6b94277cd37, type: 2}
+  m_Controller: {fileID: 9100000, guid: cb4083909cc2b9e4ea876802a2f3f985, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -245,7 +261,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 8082642733851054949}
+    m_TransformParent: {fileID: 5789413625791565979}
     m_Modifications:
     - target: {fileID: 2955692806865153580, guid: b1635c641d3b70d41af979a75ba5b779, type: 3}
       propertyPath: m_Name
@@ -257,7 +273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4412829041137734574, guid: b1635c641d3b70d41af979a75ba5b779, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.174
+      value: 0.17400002
       objectReference: {fileID: 0}
     - target: {fileID: 4412829041137734574, guid: b1635c641d3b70d41af979a75ba5b779, type: 3}
       propertyPath: m_LocalPosition.z
