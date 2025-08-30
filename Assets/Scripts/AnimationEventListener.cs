@@ -1,11 +1,18 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AnimationEventListener : MonoBehaviour
 {
-  public EnemyLogic enemyLogic;
+  public UnityEvent OnAttackRedispatch;
+  public UnityEvent OnDeathCompleteRedispatch;
 
   public void OnAttackEvent()
   {
-    enemyLogic.PerformAttack();
+    OnAttackRedispatch.Invoke();
+  }
+
+  public void OnDeathCompleteEvent()
+  {
+    OnDeathCompleteRedispatch.Invoke();
   }
 }

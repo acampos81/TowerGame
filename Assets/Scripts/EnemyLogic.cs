@@ -40,4 +40,14 @@ public class EnemyLogic : MonoBehaviour
       towerHittableObject.TakeDamage(damageAmount);
     }
   }
+
+  public void HandleDeath()
+  {
+    animator.SetBool("IsDead", true);
+  }
+
+  public void RemoveFromLevel()
+  {
+    GameObject.Destroy(this.gameObject);
+  }
 }

@@ -93,7 +93,19 @@ MonoBehaviour:
   maxHitPoints: 150
   OnHitPointsZero:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4912457615240094280}
+        m_TargetAssemblyTypeName: EnemyLogic, Assembly-CSharp
+        m_MethodName: HandleDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!136 &8593333585278671490
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -239,7 +251,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 750f526386ddd27469870b3398c6a29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyLogic: {fileID: 4912457615240094280}
+  OnAttackRedispatch:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4912457615240094280}
+        m_TargetAssemblyTypeName: EnemyLogic, Assembly-CSharp
+        m_MethodName: PerformAttack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDeathCompleteRedispatch:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4912457615240094280}
+        m_TargetAssemblyTypeName: EnemyLogic, Assembly-CSharp
+        m_MethodName: RemoveFromLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &2146649270237517922
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -258,7 +299,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6296730761569257123, guid: ac1f882316bb9054281cf9aade70520b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.47
       objectReference: {fileID: 0}
     - target: {fileID: 6296730761569257123, guid: ac1f882316bb9054281cf9aade70520b, type: 3}
       propertyPath: m_LocalPosition.z
