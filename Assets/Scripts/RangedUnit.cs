@@ -1,22 +1,13 @@
-using System.Collections.Generic;
 using UnityEngine;
 
-public class RangedUnit : MonoBehaviour
+public class RangedUnit : PlayerUnit
 {
   public GameObject spearPrefab;
   public Transform spearPoint;
   public Animator animator;
 
-  private HittableObject _target;
-  private List<HittableObject> _targetList;
   private Vector3 _aimDirection;
   private float _throwInterval;
-
-  // Start is called once before the first execution of Update after the MonoBehaviour is created
-  void Start()
-  {
-    _targetList = new List<HittableObject>();
-  }
 
   // Update is called once per frame
   void Update()
@@ -35,28 +26,6 @@ public class RangedUnit : MonoBehaviour
     else
     {
       TryNextTarget();
-    }
-  }
-
-  private void TryNextTarget()
-  {
-    if(_targetList.Count > 0)
-    {
-      var hittableObject = _targetList[0];
-      _targetList.Remove(hittableObject);
-
-      if(hittableObject != null && hittableObject.GetHitPointsPercentage() > 0f)
-      {
-        _target = hittableObject;
-      }
-    }
-  }
-
-  private void CheckTargetHitPoints()
-  {
-    if(_target.GetHitPointsPercentage() <= 0f)
-    {
-      _target = null;
     }
   }
 
@@ -102,17 +71,14 @@ public class RangedUnit : MonoBehaviour
 
   }
 
-  private void OnTriggerEnter(Collider other)
+  private void OnTriggerExit(Collider other)
   {
     if(other.gameObject.tag == "Enemy")
     {
-      if(_target == null)
+      var hittableObject = other.gameObject.GetComponent<HittableObject>();
+      if(_targetList.Contains(hittableObject))
       {
-        _target = other.gameObject.GetComponent<HittableObject>();
-      }
-      else
-      {
-        _targetList.Add(other.gameObject.GetComponent<HittableObject>());
+        _targetList.Remove(hittableObject);
       }
     }
   }
