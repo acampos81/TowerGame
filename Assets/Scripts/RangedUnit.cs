@@ -73,17 +73,20 @@ public class RangedUnit : MonoBehaviour
 
   private void CheckAimDirection()
   {
-     // what is the target direction?
-    var bodyDirection = _target.transform.position - transform.position;
-    // ensure there's no pitch in the look direction
-    bodyDirection.y = 0f;
+    if(_target != null)
+    {
+      // what is the target direction?
+      var bodyDirection = _target.transform.position - transform.position;
+      // ensure there's no pitch in the look direction
+      bodyDirection.y = 0f;
 
-    // what is the aim direction?
-    _aimDirection = _target.transform.position - spearPoint.position;
-    _aimDirection += Vector3.up;
+      // what is the aim direction?
+      _aimDirection = _target.transform.position - spearPoint.position;
+      _aimDirection += Vector3.up;
 
-    // rotate the body in that direction
-    transform.rotation = Quaternion.LookRotation(bodyDirection);
+      // rotate the body in that direction
+      transform.rotation = Quaternion.LookRotation(bodyDirection);
+    }
   }
 
   public void LaunchSpear()

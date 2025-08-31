@@ -27,7 +27,6 @@ public class EnemyLogic : MonoBehaviour
 
     agent.isStopped = true;
     agent.ResetPath();
-
     animator.SetBool("IsAttacking", true);
   }
 
@@ -43,6 +42,8 @@ public class EnemyLogic : MonoBehaviour
 
   public void HandleDeath()
   {
+    agent.isStopped = true;
+    agent.ResetPath();
     animator.SetBool("IsDead", true);
   }
 

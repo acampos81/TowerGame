@@ -74,6 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 5383792046385074730}
+  damageAmount: 10
 --- !u!1 &8506826965249341495
 GameObject:
   m_ObjectHideFlags: 0

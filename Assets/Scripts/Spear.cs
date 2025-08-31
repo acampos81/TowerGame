@@ -3,6 +3,7 @@ using UnityEngine;
 public class Spear : MonoBehaviour
 {
   public Rigidbody rigidBody;
+  public int damageAmount;
 
   private float _removalTime;
 
@@ -28,5 +29,15 @@ public class Spear : MonoBehaviour
   public void Throw()
   {
     rigidBody.AddForce(transform.forward * 50f, ForceMode.Impulse);
+  }
+
+  private void OnCollisionEnter(Collision collision)
+  {
+    var otherObject = collision.gameObject;
+    if(otherObject.tag == "Enemy")
+    {
+      var hittableObject = otherObject.GetComponent<HittableObject>();
+      hittableObject.TakeDamage(damageAmount);
+    }
   }
 }
