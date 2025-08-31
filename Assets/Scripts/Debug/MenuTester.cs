@@ -13,18 +13,35 @@ public class MenuTester : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    // GameOver
     if (Input.GetKeyDown(KeyCode.Alpha1))
     {
-      uiManager.ShowGameOver(true);
+      uiManager.UpdateUIState("Default");
+    }
+
+    if (Input.GetKeyDown(KeyCode.Alpha2))
+    {
+      uiManager.UpdateUIState("UnitSelection");
+    }
+
+    if (Input.GetKeyDown(KeyCode.Alpha3))
+    {
+      uiManager.UpdateUIState("UnitPlacement");
+    }
+
+    // GameOver
+    if (Input.GetKeyDown(KeyCode.Alpha4))
+    {
+      uiManager.UpdateUIState("GameOver");
     }
 
     // Victory
-    if(Input.GetKeyDown(KeyCode.Alpha2))
+    if(Input.GetKeyDown(KeyCode.Alpha5))
     {
-      uiManager.ShowVictoryScreen(true);
+      uiManager.UpdateUIState("Victory");
     }
 
+
+    /*
     if(Input.GetKeyDown(KeyCode.Alpha3))
     {
       PlayerPrefs.SetInt(Constants.LEVEL_1_KEY, 1);
@@ -34,5 +51,6 @@ public class MenuTester : MonoBehaviour
     {
       PlayerPrefs.DeleteKey(Constants.LEVEL_1_KEY);
     }
+    */
   }
 }

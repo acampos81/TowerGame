@@ -18,11 +18,11 @@ public class LevelManager : MonoBehaviour
 
   public void TowerDestroyed()
   {
-    uiManager.ShowGameOver(true);
+    uiManager.UpdateUIState("GameOver");
   }
 
   public void AllEnemiesDestroyed()
   {
-    Debug.Log("Game Is Over, Player Won.");
+    uiManager.UpdateUIState("Victory");
   }
 }

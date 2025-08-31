@@ -5,6 +5,8 @@ public class UIManager : MonoBehaviour
   public GameObject pauseMenu;
   public GameObject gameOver;
   public GameObject victoryScreen;
+  public GameObject buyUnitsButton;
+  public GameObject unitPanel;
 
   // Start is called once before the first execution of Update after the MonoBehaviour is created
   void Start()
@@ -30,17 +32,70 @@ public class UIManager : MonoBehaviour
     }
   }
 
-  public void ShowGameOver(bool isVisible)
+  public void UpdateUIState(string uiState)
   {
-    pauseMenu.gameObject.SetActive(false);
-    gameOver.gameObject.SetActive(isVisible);
-    victoryScreen.gameObject.SetActive(false);
+    switch(uiState)
+    {
+      case "Default":
+        ShowDefaultUI();
+        break;
+      case "UnitSelection":
+        ShowUnitSelectionUI();
+        break;
+      case "UnitPlacement":
+        ShowUnitPlacementUI();
+        break;
+      case "GameOver":
+        ShowGameOverUI();
+        break;
+      case "Victory":
+        ShowVictoryScreenUI();
+        break;
+    }
   }
 
-  public void ShowVictoryScreen(bool isVisible)
+  private void ShowDefaultUI()
   {
-    pauseMenu.gameObject.SetActive(false);
-    gameOver.gameObject.SetActive(false);
-    victoryScreen.gameObject.SetActive(isVisible);
+    pauseMenu.SetActive(false);
+    gameOver.SetActive(false);
+    victoryScreen.SetActive(false);
+    buyUnitsButton.SetActive(true);
+    unitPanel.SetActive(false);
+  }
+
+  private void ShowUnitSelectionUI()
+  {
+    pauseMenu.SetActive(false);
+    gameOver.SetActive(false);
+    victoryScreen.SetActive(false);
+    buyUnitsButton.SetActive(false);
+    unitPanel.SetActive(true);
+  }
+
+  private void ShowUnitPlacementUI()
+  {
+    pauseMenu.SetActive(false);
+    gameOver.SetActive(false);
+    victoryScreen.SetActive(false);
+    buyUnitsButton.SetActive(false);
+    unitPanel.SetActive(false);
+  }
+
+  private void ShowGameOverUI()
+  {
+    pauseMenu.SetActive(false);
+    gameOver.SetActive(true);
+    victoryScreen.SetActive(false);
+    buyUnitsButton.SetActive(false);
+    unitPanel.SetActive(false);
+  }
+
+  private void ShowVictoryScreenUI()
+  {
+    pauseMenu.SetActive(false);
+    gameOver.SetActive(false);
+    victoryScreen.SetActive(true);
+    buyUnitsButton.SetActive(false);
+    unitPanel.SetActive(false);
   }
 }
