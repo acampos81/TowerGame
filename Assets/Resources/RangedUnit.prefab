@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6434965842194828110}
   - component: {fileID: 975853854464394669}
   - component: {fileID: 4127852923267410369}
+  - component: {fileID: 1805578445719542252}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -31,7 +32,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8529029586795686690}
   m_Father: {fileID: 4096708654089728379}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6434965842194828110
@@ -97,7 +99,7 @@ Animator:
   m_GameObject: {fileID: 1026972081501148548}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 50904978673b0ad41b83d6b94277cd37, type: 2}
+  m_Controller: {fileID: 9100000, guid: 234ec1974cedbef4691f72be6b546f0b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -109,6 +111,36 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1805578445719542252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026972081501148548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750f526386ddd27469870b3398c6a29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnAttackRedispatch:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4487581658712394271}
+        m_TargetAssemblyTypeName: RangedUnit, Assembly-CSharp
+        m_MethodName: LaunchSpear
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDeathCompleteRedispatch:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1517911873528783051
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,13 +167,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1517911873528783051}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.6035963, y: -0, z: -0, w: 0.79729015}
-  m_LocalPosition: {x: 0.607, y: 1.606, z: 0}
-  m_LocalScale: {x: 0.1, y: 1, z: 0.09999999}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.607, y: 0.6, z: 0}
+  m_LocalScale: {x: 0.1, y: 1, z: 0.099999994}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4096708654089728379}
-  m_LocalEulerAnglesHint: {x: 74.256, y: 0, z: 0}
+  m_Father: {fileID: 6879242676958021980}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &9180188514851889743
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -204,10 +236,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4096708654089728379}
-  - component: {fileID: 1209424302013662715}
   - component: {fileID: 6591178320744477055}
   - component: {fileID: 3540572734456386185}
   - component: {fileID: 7749307967675779447}
+  - component: {fileID: 4487581658712394271}
   m_Layer: 0
   m_Name: RangedUnit
   m_TagString: Untagged
@@ -229,31 +261,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6879242676958021980}
-  - {fileID: 8529029586795686690}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!195 &1209424302013662715
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1705068078036331568}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!136 &6591178320744477055
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -296,7 +305,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 15
+  m_Radius: 35
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &7749307967675779447
 Rigidbody:
@@ -325,3 +334,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4487581658712394271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705068078036331568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcdce657352e80d4cadd03041fdc3fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spearPrefab: {fileID: 2921478923219129073, guid: a6f679b692ac0c1468077fc4fb410e72, type: 3}
+  spearPoint: {fileID: 8529029586795686690}
+  animator: {fileID: 4127852923267410369}

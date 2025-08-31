@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4912457615240094280}
   - component: {fileID: -7021800451641346192}
   - component: {fileID: 8593333585278671490}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 661218581345062823}
   - component: {fileID: 133949866898837030}
   - component: {fileID: 9193621173574812407}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,10 +289,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 726231174235386061}
     m_Modifications:
+    - target: {fileID: 1235932538662121172, guid: ac1f882316bb9054281cf9aade70520b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516722983287891152, guid: ac1f882316bb9054281cf9aade70520b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4052313848440183471, guid: ac1f882316bb9054281cf9aade70520b, type: 3}
       propertyPath: hittableObject
       value: 
       objectReference: {fileID: -7021800451641346192}
+    - target: {fileID: 4444420037274779067, guid: ac1f882316bb9054281cf9aade70520b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612938123115310272, guid: ac1f882316bb9054281cf9aade70520b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6296730761569257123, guid: ac1f882316bb9054281cf9aade70520b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -337,9 +353,25 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7101722529904519117, guid: ac1f882316bb9054281cf9aade70520b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182306710925285701, guid: ac1f882316bb9054281cf9aade70520b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8184266163258016363, guid: ac1f882316bb9054281cf9aade70520b, type: 3}
       propertyPath: m_Name
       value: HealthBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8184266163258016363, guid: ac1f882316bb9054281cf9aade70520b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8802628445064439493, guid: ac1f882316bb9054281cf9aade70520b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
