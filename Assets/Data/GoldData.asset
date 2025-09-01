@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GoldData
   m_EditorClassIdentifier: 
   startingGold: 100
-  meleeUnitCost: 10
-  rangedUnitCost: 20
-  enemy1Reward: 2
-  enemy2Reward: 5
+  meleeUnitCost: 20
+  rangedUnitCost: 50
+  enemy1Reward: 10
+  enemy2Reward: 20

@@ -17287,7 +17287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c2f6ec7c7b9384b8d7dc0ad8c3b368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitPoints: 500
+  maxHitPoints: 700
   OnHitPointsZero:
     m_PersistentCalls:
       m_Calls:
@@ -23636,7 +23636,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1292008245
 Transform:
   m_ObjectHideFlags: 0
@@ -26317,6 +26317,10 @@ PrefabInstance:
       propertyPath: attackArea
       value: 
       objectReference: {fileID: 216860734}
+    - target: {fileID: 9002113993461552030, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: spawnInterval
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 9002113993461552030, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
       propertyPath: 'allSpawners.Array.data[0]'
       value: 
@@ -37869,7 +37873,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1986328041
 Transform:
   m_ObjectHideFlags: 0
