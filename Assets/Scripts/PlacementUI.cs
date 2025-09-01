@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlacementUI : MonoBehaviour
 {
@@ -9,11 +10,32 @@ public class PlacementUI : MonoBehaviour
   public LayerMask raycastMask;
 
   private Camera _camera;
+  private string _triggerTag;
+  private GameObject _unitPrefab;
+  private bool _placementValid;
+
+  public UnityEvent OnUnitSpawned;
+  public UnityEvent OnSpawnCancelled;
 
   // Start is called once before the first execution of Update after the MonoBehaviour is created
   void Start()
   {
     _camera = Camera.main;
+  }
+
+  public void SetUnitType(int unitType)
+  {
+    switch(unitType)
+    {
+      case 0:
+        _triggerTag = "MeleePlacement";
+        _unitPrefab = Resources.Load("MeleeUnit") as GameObject;
+        break;
+      case 1:
+        _triggerTag = "RangedPlacement";
+        _unitPrefab = Resources.Load("RangedUnit") as GameObject;
+        break;
+    }
   }
 
   // Update is called once per frame
@@ -24,11 +46,14 @@ public class PlacementUI : MonoBehaviour
     var worldPoint = _camera.ScreenToWorldPoint(mousePosition);
     var direction = (worldPoint - _camera.transform.position).normalized;
 
+    _placementValid = false;
+
     if(Physics.Raycast(_camera.transform.position, direction, out RaycastHit hitInfo, _camera.farClipPlane, raycastMask, QueryTriggerInteraction.Collide))
     {
-      if(hitInfo.collider.tag == "MeleePlacement" || hitInfo.collider.tag == "RangedPlacement")
+      if(hitInfo.collider.tag == _triggerTag)
       {
         markerRenderer.material = greenMaterial;
+        _placementValid = true;
       }
       else
       {
@@ -36,6 +61,18 @@ public class PlacementUI : MonoBehaviour
       }
 
       markerTransform.position = hitInfo.point;
+    }
+
+    if(Input.GetMouseButtonDown(0) && _placementValid)
+    {
+      var unitInstance = GameObject.Instantiate(_unitPrefab);
+      unitInstance.transform.position = markerTransform.position;
+      OnUnitSpawned.Invoke();
+    }
+
+    if(Input.GetMouseButtonDown(1))
+    {
+      OnSpawnCancelled.Invoke();
     }
 
     Debug.DrawLine(_camera.transform.position, worldPoint, Color.green);

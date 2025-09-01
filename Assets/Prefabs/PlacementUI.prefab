@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2003193304402825296}
+  - component: {fileID: 5999687391608115715}
   m_Layer: 5
   m_Name: PlacementUI
   m_TagString: Untagged
@@ -23,7 +24,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6161255281125062661}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -36,6 +37,25 @@ RectTransform:
   m_AnchoredPosition: {x: 341.5, y: 192}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5999687391608115715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6161255281125062661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42dc55ce6273fb540b35e7277cafffd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerTransform: {fileID: 6194320255212714666}
+  markerRenderer: {fileID: 215386351335585582}
+  greenMaterial: {fileID: 2100000, guid: f82a764b743c4b24b81582a363ca91ae, type: 2}
+  redMaterial: {fileID: 2100000, guid: e7a71e65eece7664fa5c5f1d1d01724e, type: 2}
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 648
 --- !u!1001 &3740744394995226554
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93,6 +113,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d4a3ec1afc07844aaeab444e88b1728, type: 3}
+--- !u!23 &215386351335585582 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3536732583816224916, guid: 7d4a3ec1afc07844aaeab444e88b1728, type: 3}
+  m_PrefabInstance: {fileID: 3740744394995226554}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6194320255212714666 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7358721542668987664, guid: 7d4a3ec1afc07844aaeab444e88b1728, type: 3}

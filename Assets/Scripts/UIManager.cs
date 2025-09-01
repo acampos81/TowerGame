@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
   public GameObject victoryScreen;
   public GameObject buyUnitsButton;
   public GameObject unitPanel;
+  public GameObject placementUI;
 
   // Start is called once before the first execution of Update after the MonoBehaviour is created
   void Start()
@@ -61,6 +62,7 @@ public class UIManager : MonoBehaviour
     victoryScreen.SetActive(false);
     buyUnitsButton.SetActive(true);
     unitPanel.SetActive(false);
+    placementUI.SetActive(false);
   }
 
   private void ShowUnitSelectionUI()
@@ -70,6 +72,7 @@ public class UIManager : MonoBehaviour
     victoryScreen.SetActive(false);
     buyUnitsButton.SetActive(false);
     unitPanel.SetActive(true);
+    placementUI.SetActive(false);
   }
 
   private void ShowUnitPlacementUI()
@@ -79,6 +82,7 @@ public class UIManager : MonoBehaviour
     victoryScreen.SetActive(false);
     buyUnitsButton.SetActive(false);
     unitPanel.SetActive(false);
+    placementUI.SetActive(true);
   }
 
   private void ShowGameOverUI()
@@ -88,6 +92,7 @@ public class UIManager : MonoBehaviour
     victoryScreen.SetActive(false);
     buyUnitsButton.SetActive(false);
     unitPanel.SetActive(false);
+    placementUI.SetActive(false);
   }
 
   private void ShowVictoryScreenUI()
@@ -97,5 +102,6 @@ public class UIManager : MonoBehaviour
     victoryScreen.SetActive(true);
     buyUnitsButton.SetActive(false);
     unitPanel.SetActive(false);
+    placementUI.SetActive(false);
   }
 }
