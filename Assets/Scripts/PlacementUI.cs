@@ -3,6 +3,7 @@ using UnityEngine.Events;
 
 public class PlacementUI : MonoBehaviour
 {
+  public GoldManager goldManager;
   public Transform markerTransform;
   public MeshRenderer markerRenderer;
   public Material greenMaterial;
@@ -10,6 +11,7 @@ public class PlacementUI : MonoBehaviour
   public LayerMask raycastMask;
 
   private Camera _camera;
+  private int _unitType;
   private string _triggerTag;
   private GameObject _unitPrefab;
   private bool _placementValid;
@@ -25,6 +27,8 @@ public class PlacementUI : MonoBehaviour
 
   public void SetUnitType(int unitType)
   {
+    _unitType = unitType;
+
     switch(unitType)
     {
       case 0:
@@ -68,6 +72,7 @@ public class PlacementUI : MonoBehaviour
       var unitInstance = GameObject.Instantiate(_unitPrefab);
       unitInstance.transform.position = markerTransform.position;
       OnUnitSpawned.Invoke();
+      goldManager.UnitPurchased(_unitType);
     }
 
     if(Input.GetMouseButtonDown(1))

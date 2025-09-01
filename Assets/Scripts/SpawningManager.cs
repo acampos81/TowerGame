@@ -4,6 +4,8 @@ using UnityEngine.Events;
 
 public class SpawningManager : MonoBehaviour
 {
+  public GoldManager goldManager;
+
   [Tooltip("How often enemies will spawn in seconds.")]
   public float spawnInterval;
 
@@ -47,8 +49,8 @@ public class SpawningManager : MonoBehaviour
       var spawner = _activeSpawners[randomSpawnerIndex];
       var enemyInstance = spawner.SpawnEnemy(spawnPoint, attackArea);
 
-      var hittableObject = enemyInstance.GetComponent<HittableObject>();
-      hittableObject.OnHitPointsZero.AddListener(EnemyEliminated);
+      var enemyLogic = enemyInstance.GetComponent<EnemyLogic>();
+      enemyLogic.OnEnemyKilled.AddListener(EnemyEliminated);
 
       _spawnedEnemies++;
       
@@ -59,9 +61,11 @@ public class SpawningManager : MonoBehaviour
     }
   }
 
-  public void EnemyEliminated()
+  public void EnemyEliminated(int enemyType)
   {
     _spawnedEnemies--;
+
+    goldManager.EnemyReward(enemyType);
 
     Debug.Log($"Enemies left:{_spawnedEnemies}");
 

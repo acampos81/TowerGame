@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class EnemyLogic : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class EnemyLogic : MonoBehaviour
   public Transform capsuleTransform;
   public LayerMask raycastMask;
   public int damageAmount;
+
+  public int enemyType;
+  public UnityEvent<int> OnEnemyKilled;
 
   // Start is called once before the first execution of Update after the MonoBehaviour is created
   void Start()
@@ -45,6 +49,7 @@ public class EnemyLogic : MonoBehaviour
     agent.isStopped = true;
     agent.ResetPath();
     animator.SetBool("IsDead", true);
+    OnEnemyKilled.Invoke(enemyType);
   }
 
   public void RemoveFromLevel()

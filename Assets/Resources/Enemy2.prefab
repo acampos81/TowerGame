@@ -78,6 +78,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   damageAmount: 10
+  enemyType: 1
+  OnEnemyKilled:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &-7021800451641346192
 MonoBehaviour:
   m_ObjectHideFlags: 0

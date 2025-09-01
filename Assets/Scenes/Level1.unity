@@ -19713,6 +19713,17 @@ Transform:
   - {fileID: 1802343089}
   m_Father: {fileID: 1292008245}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1087251697 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6823044795412529359, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+  m_PrefabInstance: {fileID: 1396766788}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ddb1d7d9a7e61a45914484dbd57a70d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1087391629
 GameObject:
   m_ObjectHideFlags: 0
@@ -26218,6 +26229,62 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5710956397906048013, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: attackArea
+      value: 
+      objectReference: {fileID: 216860734}
+    - target: {fileID: 5710956397906048013, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: goldManager
+      value: 
+      objectReference: {fileID: 1087251697}
+    - target: {fileID: 5710956397906048013, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: 'allSpawners.Array.data[0]'
+      value: 
+      objectReference: {fileID: 616780176}
+    - target: {fileID: 5710956397906048013, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: 'allSpawners.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2102112558}
+    - target: {fileID: 5710956397906048013, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: 'spawnPoints.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4825588132948670392}
+    - target: {fileID: 5710956397906048013, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: 'spawnPoints.Array.data[1]'
+      value: 
+      objectReference: {fileID: 648312071}
+    - target: {fileID: 5710956397906048013, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: 'spawnPoints.Array.data[2]'
+      value: 
+      objectReference: {fileID: 22182788}
+    - target: {fileID: 5710956397906048013, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: 'spawnPoints.Array.data[3]'
+      value: 
+      objectReference: {fileID: 431194858}
+    - target: {fileID: 5710956397906048013, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: 'spawnPoints.Array.data[4]'
+      value: 
+      objectReference: {fileID: 1421838574}
+    - target: {fileID: 5710956397906048013, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: 'spawnPoints.Array.data[5]'
+      value: 
+      objectReference: {fileID: 1166096388}
+    - target: {fileID: 5710956397906048013, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: 'spawnPoints.Array.data[6]'
+      value: 
+      objectReference: {fileID: 879742450}
+    - target: {fileID: 5710956397906048013, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: 'spawnPoints.Array.data[7]'
+      value: 
+      objectReference: {fileID: 211164811}
+    - target: {fileID: 5710956397906048013, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: 'spawnPoints.Array.data[8]'
+      value: 
+      objectReference: {fileID: 1109743697}
+    - target: {fileID: 5710956397906048013, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: 'spawnPoints.Array.data[9]'
+      value: 
+      objectReference: {fileID: 102545323}
     - target: {fileID: 6279940855111282553, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
       propertyPath: hittableObject
       value: 
@@ -26246,6 +26313,58 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9002113993461552030, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: attackArea
+      value: 
+      objectReference: {fileID: 216860734}
+    - target: {fileID: 9002113993461552030, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: 'allSpawners.Array.data[0]'
+      value: 
+      objectReference: {fileID: 616780176}
+    - target: {fileID: 9002113993461552030, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: 'allSpawners.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2102112558}
+    - target: {fileID: 9002113993461552030, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: 'spawnPoints.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4825588132948670392}
+    - target: {fileID: 9002113993461552030, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: 'spawnPoints.Array.data[1]'
+      value: 
+      objectReference: {fileID: 648312071}
+    - target: {fileID: 9002113993461552030, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: 'spawnPoints.Array.data[2]'
+      value: 
+      objectReference: {fileID: 22182788}
+    - target: {fileID: 9002113993461552030, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: 'spawnPoints.Array.data[3]'
+      value: 
+      objectReference: {fileID: 431194858}
+    - target: {fileID: 9002113993461552030, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: 'spawnPoints.Array.data[4]'
+      value: 
+      objectReference: {fileID: 1421838574}
+    - target: {fileID: 9002113993461552030, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: 'spawnPoints.Array.data[5]'
+      value: 
+      objectReference: {fileID: 1166096388}
+    - target: {fileID: 9002113993461552030, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: 'spawnPoints.Array.data[6]'
+      value: 
+      objectReference: {fileID: 879742450}
+    - target: {fileID: 9002113993461552030, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: 'spawnPoints.Array.data[7]'
+      value: 
+      objectReference: {fileID: 211164811}
+    - target: {fileID: 9002113993461552030, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: 'spawnPoints.Array.data[8]'
+      value: 
+      objectReference: {fileID: 1109743697}
+    - target: {fileID: 9002113993461552030, guid: 7a75eba4795c55e4491840e98cea523c, type: 3}
+      propertyPath: 'spawnPoints.Array.data[9]'
+      value: 
+      objectReference: {fileID: 102545323}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27918,81 +28037,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1480975381}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1484520635
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1484520637}
-  - component: {fileID: 1484520636}
-  m_Layer: 0
-  m_Name: SpawningManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1484520636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1484520635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 421086766583b724da6a5ce86e1ade2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnInterval: 1
-  allSpawners:
-  - {fileID: 616780176}
-  - {fileID: 2102112558}
-  spawnPoints:
-  - {fileID: 4825588132948670392}
-  - {fileID: 648312071}
-  - {fileID: 22182788}
-  - {fileID: 431194858}
-  - {fileID: 1421838574}
-  - {fileID: 1166096388}
-  - {fileID: 879742450}
-  - {fileID: 211164811}
-  - {fileID: 1109743697}
-  - {fileID: 102545323}
-  attackArea: {fileID: 216860734}
-  OnAllEnemiesEliminated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 343559197}
-        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: AllEnemiesDestroyed
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!4 &1484520637
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1484520635}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1491968704
 GameObject:
   m_ObjectHideFlags: 0
@@ -41710,7 +41754,6 @@ SceneRoots:
   - {fileID: 1396766788}
   - {fileID: 327922152}
   - {fileID: 630750316}
-  - {fileID: 1484520637}
   - {fileID: 360366785}
   - {fileID: 1292008245}
   - {fileID: 1986328041}
