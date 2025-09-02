@@ -24,6 +24,7 @@ public class SpawningManager : MonoBehaviour
   {
     _activeSpawners = new List<Spawner>();
     _activeSpawners.AddRange(allSpawners);
+    _elapsedSpawnTime = spawnInterval;
   }
 
   // Update is called once per frame

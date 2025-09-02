@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Events;
 
 public class PlacementUI : MonoBehaviour
@@ -70,7 +71,20 @@ public class PlacementUI : MonoBehaviour
     if(Input.GetMouseButtonDown(0) && _placementValid)
     {
       var unitInstance = GameObject.Instantiate(_unitPrefab);
+      var agent = unitInstance.GetComponent<NavMeshAgent>();
+
+      if(agent != null)
+      {
+        agent.enabled = false;
+      }
+
       unitInstance.transform.position = markerTransform.position;
+
+      if(agent != null)
+      {
+        agent.enabled = true;
+      }
+
       OnUnitSpawned.Invoke();
       goldManager.UnitPurchased(_unitType);
     }
